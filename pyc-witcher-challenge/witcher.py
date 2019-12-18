@@ -12,9 +12,9 @@ import shutil
 from watchdog.observers import Observer #watches directories
 from watchdog.events import PatternMatchingEventHandler # matching certain event patterms
 
-from .handlers import VideoHandler
-from .handlers import FolderHandler
-from .handlers import FileHandler
+from handlers.video_handler import VideoHandler
+from handlers.folder_handler import FolderHandler
+from handlers.file_handler import FileHandler
 
 # Handling all videos
 

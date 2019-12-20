@@ -1,8 +1,6 @@
 """
 The Witcher - Background running process
 Run the observers in the background to know whenever a file is being saved.
-
-2178690313
 """
 
 import time
@@ -17,7 +15,6 @@ from handlers.folder_handler import FolderHandler
 from handlers.file_handler import FileHandler
 
 # Handling all videos
-
 if __name__ == '__main__':
     # if its a script call defined a schedule
     args = sys.argv[1:]
@@ -32,5 +29,4 @@ if __name__ == '__main__':
             time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
-    
     observer.join()

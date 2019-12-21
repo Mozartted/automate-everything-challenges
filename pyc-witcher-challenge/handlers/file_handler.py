@@ -27,8 +27,9 @@ class FileHandler (PatternMatchingEventHandler):
             shutil.move(event.src_path, self.destination+'/'+explodedString[-1])
         else:
             explodedString = event.src_path.split("/")
-            print(explodedString)
+            print('... processed directories 🔥')
             shutil.move(event.src_path, self.destination+'/'+explodedString[-1])
+
     def on_modified(self, event):
         self.process(event)
 

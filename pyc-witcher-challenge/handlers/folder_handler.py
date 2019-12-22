@@ -1,7 +1,7 @@
 from watchdog.events import PatternMatchingEventHandler
 
 class FolderHandler (PatternMatchingEventHandler):
-    patterns = [ "*.mkv" , "*.mp4", "*.avi"]
+    patterns = []
 
     def process(self, event):
         """

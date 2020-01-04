@@ -4,7 +4,7 @@ import os
 import getpass
 
 class FileHandler (PatternMatchingEventHandler):
-    patterns = [ "*.mkv" , "*.mp4", "*.avi", "*.pdf"]
+    patterns = ["pdf", "txt", "html", "jpg", "png", "jpeg"]
     currentUser = getpass.getuser()
     destination = '/Users/'+currentUser+'/My Documents/Downloads/Files'
 
@@ -23,7 +23,7 @@ class FileHandler (PatternMatchingEventHandler):
 
         if event.is_directory == True:
             explodedString = event.src_path.split("/")
-            print(explodeString)
+            print(explodedString)
             shutil.move(event.src_path, self.destination+'/'+explodedString[-1])
         else:
             explodedString = event.src_path.split("/")

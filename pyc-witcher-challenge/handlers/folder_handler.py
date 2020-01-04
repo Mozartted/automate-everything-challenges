@@ -1,7 +1,12 @@
 from watchdog.events import PatternMatchingEventHandler
+import shutil
+import getpass
 
 class FolderHandler (PatternMatchingEventHandler):
     patterns = []
+    currentUser = getpass.getuser()
+    destination = '/Users/' + currentUser + '/My Documents/Downloads/Folders'
+
 
     def process(self, event):
         """
@@ -16,7 +21,7 @@ class FolderHandler (PatternMatchingEventHandler):
         print(event.src_path, event.event_type, self.currentUser)
         if event.is_directory == True:
             explodedString = event.src_path.split("/")
-            print(explodeString)
+            print(explodedString)
             shutil.move(event.src_path, self.destination+'/'+explodedString[-1])
         else:
             explodedString = event.src_path.split("/")

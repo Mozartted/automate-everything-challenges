@@ -1,0 +1,3 @@
+[submodule "witcher-challenge"]
+	path = witcher-challenge
+	url = https://github.com/mozartted/witcher-challenge

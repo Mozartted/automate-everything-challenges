@@ -2,11 +2,11 @@ from watchdog.events import PatternMatchingEventHandler
 import shutil
 import getpass
 
-
-class FolderHandler(PatternMatchingEventHandler):
+class FolderHandler (PatternMatchingEventHandler):
     patterns = []
     currentUser = getpass.getuser()
     destination = '/Users/' + currentUser + '/My Documents/Downloads/Folders'
+
 
     def process(self, event):
         """
@@ -19,10 +19,10 @@ class FolderHandler(PatternMatchingEventHandler):
         """
         # the file will be processed there
         print(event.src_path, event.event_type, self.currentUser)
-        if event.is_directory:
+        if event.is_directory == True:
             explodedString = event.src_path.split("/")
             print(explodedString)
-            shutil.move(event.src_path, self.destination + '/' + explodedString[-1])
+            shutil.move(event.src_path, self.destination+'/'+explodedString[-1])
 
     def on_modified(self, event):
         self.process(event)

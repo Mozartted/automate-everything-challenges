@@ -1,3 +1,6 @@
 [submodule "witcher-challenge"]
 	path = witcher-challenge
 	url = https://github.com/mozartted/witcher-challenge
+[submodule "movie-analysis-challenge"]
+	path = movie-analysis-challenge
+	url = git@github.com:Mozartted/movie-analysis-challenge.git

@@ -1,5 +1,10 @@
 argh==0.26.2
+certifi==2019.11.28
+chardet==3.0.4
 daemonize==2.5.0
+idna==2.9
 pathtools==0.1.2
 PyYAML==5.2
+requests==2.23.0
+urllib3==1.25.8
 watchdog==0.9.0

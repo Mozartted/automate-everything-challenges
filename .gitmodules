@@ -3,4 +3,7 @@
 	url = https://github.com/mozartted/witcher-challenge
 [submodule "movie-analysis-challenge"]
 	path = movie-analysis-challenge
-	url = git@github.com:Mozartted/movie-analysis-challenge.git
+    url = git@github.com:Mozartted/movie-analysis-challenge.git
+[submodule "webegine-challenge"]
+    path = webegine
+    url = git@github.com:Mozartted/webegine.git

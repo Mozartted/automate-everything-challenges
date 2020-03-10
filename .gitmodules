@@ -7,3 +7,6 @@
 [submodule "webegine-challenge"]
     path = webegine
     url = git@github.com:Mozartted/webegine.git
+[submodule "webegine"]
+	path = webegine
+	url = git@github.com:Mozartted/webegine.git
